@@ -175,7 +175,13 @@ for (let i = 0; i < dayArr.length; i++) {
       } else {
         Hour = H_arr[i] + "h "
       }
-      LastOnlineTime[i].innerHTML = `${day}${Hour}`;
+      if(`${day}${Hour}`==''){
+        LastOnlineTime[i].innerHTML = 'Online';
+      }
+      else{
+        LastOnlineTime[i].innerHTML = `${day}${Hour}`;
+      }
+      
     }
   </script>
   
