@@ -34,7 +34,7 @@ def hello():
     while i < data['members']:
         lastSeen = mArrey[i]['lastSeen']
         lastSeen2 = maya.parse(lastSeen).datetime()
-        lastOnline = ((now2 + timedelta(hours=24, minutes=18)) - lastSeen2)
+        lastOnline = ((now2 - lastSeen2)
         i += 1
         dayArr.append(lastOnline.days) 
         H_arr.append(int(((lastOnline.seconds)/60)/60))
