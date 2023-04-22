@@ -73,5 +73,5 @@ def invalid_route(e):
 @app.errorhandler(500)
 def internal_error(error):
     return render_template('500.html')
-
-app.run(debug=True,host="0.0.0.0",port = 8000)
+if __name__=="__main__":
+    app.run(host="0.0.0.0")
