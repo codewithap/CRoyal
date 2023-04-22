@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")  #  home page  #
 def hello():
-    url = "https://api.clashroyale.com/v1/clans/%23QPRGGRJQ"
+    url = "https://proxy.royaleapi.dev/v1/clans/%23QPRGGRJQ"
     #  API key  # 
     file = open("key.txt","r")
     my_key = file.read()
@@ -47,7 +47,7 @@ def hello():
 
 @app.route("/key", methods = ["GET","POST"])
 def key():
-  url = "https://api.clashroyale.com/v1/clans/%23QPRGGRJQ"
+  url = "https://proxy.royaleapi.dev/v1/clans/%23QPRGGRJQ"
       #  API key  #
   file = open("key.txt","r")
   my_key = file.read()
